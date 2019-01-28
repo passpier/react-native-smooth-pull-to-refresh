@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "downlevelIteration": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": false,
+    "lib": ["es5", "es6", "es2017.object"],
+    "jsx": "react",
+    "outDir": "dist",
+    "types": ["node"],
+    "skipLibCheck": true,
+    "pretty": true
+  },
+  "exclude": [
+    "./node_modules"
+  ]
+}

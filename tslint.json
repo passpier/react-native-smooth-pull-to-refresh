@@ -1,0 +1,44 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "cyclomatic-complexity": [true, 20],
+    "max-line-length": [true, 250],
+    "no-submodule-imports": false,
+    "no-empty-interface": false,
+    "no-console": false,
+    "no-var-requires": false,
+    "no-unused-expression": false,
+    "no-bitwise": false,
+    "no-implicit-dependencies": false,
+    "no-conditional-assignment": false,
+    "triple-equals": true,
+    "interface-name": false,
+    "ordered-imports": true,
+    "object-literal-sort-keys": false,
+    "object-literal-key-quotes": [true, "as-needed"],
+    "prefer-object-spread": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "indent": [true, "spaces", 2],
+    "variable-name": [true, "check-format", "allow-leading-underscore", "allow-pascal-case"],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "public-instance-field",
+          "public-constructor",
+          "private-static-field",
+          "private-instance-field",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["./**/*.js"]
+  }
+}

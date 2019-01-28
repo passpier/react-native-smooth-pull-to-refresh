@@ -1,0 +1,55 @@
+{
+  "name": "react-native-smooth-pull-to-refresh",
+  "version": "1.0.0",
+  "description": "custom pull to refresh component for react-native",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rimraf dist && tslint -p . && stylelint ./src && tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "react-native",
+    "pull-to-refresh",
+    "animated",
+    "recompose",
+    "typescript"
+  ],
+  "author": {
+    "name": "passpier",
+    "email": "poo9810@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-native": "^0.54.0",
+    "recompose": "^0.30.0",
+    "styled-components": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.15",
+    "@types/jest": "^23.3.10",
+    "@types/react-native": "^0.57.18",
+    "@types/recompose": "^0.30.2",
+    "@types/sinon": "^7.0.2",
+    "@types/styled-components": "^3",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "23.6.0",
+    "jest-styled-components": "^6.3.1",
+    "metro-react-native-babel-preset": "0.48.5",
+    "react-native-typescript-transformer": "^1.2.10",
+    "react-test-renderer": "16.6.3",
+    "rimraf": "^2.6.2",
+    "sinon": "^7.2.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "1.5.0",
+    "ts-jest": "23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2",
+    "prettier": "^1.15.3"
+  }
+}

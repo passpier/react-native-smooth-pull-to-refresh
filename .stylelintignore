@@ -1,0 +1,9 @@
+src/__tests__
+src/images
+src/config
+src/core
+node_modules
+**/*.js
+**/*.jsx
+**/*.json
+**/*.png

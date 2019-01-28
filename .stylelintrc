@@ -1,0 +1,24 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    "selector-type-no-unknown": null,
+    "no-duplicate-selectors": null,
+    "no-descending-specificity": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "property-no-unknown": [ true,
+      {
+        "ignoreProperties": [
+          "tint-color",
+          "isSelected"
+        ]
+      }
+    ]
+  }
+}
