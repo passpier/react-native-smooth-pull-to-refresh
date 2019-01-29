@@ -2,6 +2,7 @@ import React from "react";
 import {Animated, LayoutChangeEvent, NativeScrollEvent, NativeSyntheticEvent, ScrollView} from "react-native";
 import {compose, lifecycle, withHandlers, withState} from "recompose";
 import styled from "styled-components/native";
+import {PullAnimation} from "./PullAnimation";
 import {defaultPTRBackgroundColor, pullAnimatedBackgroundColor, PullToRefreshProps} from "./PullToRefreshProps";
 
 interface PullToRefreshViewState {
@@ -47,16 +48,21 @@ const BaseComponent: React.SFC<BaseComponentProps> = ({
   <ScrollContainer backgroundColor={backgroundColor}>
     <ScrollView ref={refScrollComponent} contentContainerStyle={{minHeight}} scrollEnabled={isScrollFree} onScroll={onScrollEvent} onLayout={onLayout} onMomentumScrollEnd={onMomentumScrollEnd} onScrollEndDrag={onScrollEndDrag}>
       <RefreshContainer backgroundColor={defaultPTRBackgroundColor} height={refreshHeight}>
-        {React.Children.map(children, (child) => {
-          return React.cloneElement(child as any, {
-            isRefreshing,
-            scrollY: scrollY.interpolate({
+        <PullAnimation
+          xValues={{from: 125}}
+          yValues={{from: -50, to: 10}}
+          styleProps={{height: 70}}
+          scrollY={
+            scrollY.interpolate({
               inputRange: [0, minPullDistance],
               outputRange: [0, -minPullDistance],
-            }),
-            minPullDistance,
-          });
-        })}
+            }) as any
+          }
+          isRefreshing={isRefreshing}
+          minPullDistance={minPullDistance}
+        >
+          {children}
+        </PullAnimation>
       </RefreshContainer>
       {React.cloneElement(contentComponent, {
         scrollEnabled: false,

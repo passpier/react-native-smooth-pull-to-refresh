@@ -9,7 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "declaration": false,
+    "declaration": true,
     "lib": ["es5", "es6", "es2017.object"],
     "jsx": "react",
     "outDir": "dist",
