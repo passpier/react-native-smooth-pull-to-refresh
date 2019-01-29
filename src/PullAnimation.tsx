@@ -1,6 +1,5 @@
 import React from "react";
 import {Animated, UIManager, ViewStyle} from "react-native";
-import {compose} from "recompose";
 
 export interface PullAnimationProps {
   styleProps?: ViewStyle;
@@ -15,7 +14,7 @@ type BaseComponentProps = PullAnimationProps;
 
 UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
 
-const BaseComponent: React.SFC<BaseComponentProps> = ({styleProps, isRefreshing, scrollY, minPullDistance, yValues, xValues, children}) => (
+export const PullAnimation: React.FunctionComponent<BaseComponentProps> = ({styleProps, isRefreshing, scrollY, minPullDistance, yValues, xValues, children}) => (
   <Animated.View
     style={[
       styleProps,
@@ -39,5 +38,3 @@ const BaseComponent: React.SFC<BaseComponentProps> = ({styleProps, isRefreshing,
     })}
   </Animated.View>
 );
-
-export const PullAnimation = compose<BaseComponentProps, PullAnimationProps>()(BaseComponent);

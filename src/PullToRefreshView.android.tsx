@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ComponentClass} from "react";
 import {Animated, LayoutChangeEvent, NativeScrollEvent, NativeSyntheticEvent, ScrollView} from "react-native";
 import {compose, lifecycle, withHandlers, withState} from "recompose";
 import styled from "styled-components/native";
@@ -71,7 +71,7 @@ const BaseComponent: React.SFC<BaseComponentProps> = ({
   </ScrollContainer>
 );
 
-export const PullToRefreshView = compose<BaseComponentProps, PullToRefreshProps>(
+export const PullToRefreshView: ComponentClass<PullToRefreshProps> = compose<BaseComponentProps, PullToRefreshProps>(
   withState("scrollY", "setScrollY", new Animated.Value(0)),
   withState("shouldTriggerRefresh", "setShouldTriggerRefresh", false),
   withState("minHeight", "setMinHeight", 0),
