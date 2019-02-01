@@ -1,6 +1,6 @@
 {
   "name": "react-native-smooth-pull-to-refresh",
-  "version": "1.0.0",
+  "version": "0.7.0",
   "description": "custom pull to refresh component for react-native",
   "main": "./index.js",
   "types": "./index.d.ts",
