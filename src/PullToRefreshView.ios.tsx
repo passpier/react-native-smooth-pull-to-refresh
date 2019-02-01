@@ -45,7 +45,7 @@ const BaseComponent: React.SFC<BaseComponentProps> = ({
         }),
       }}
     >
-      <PullAnimation xValues={{from: 125}} yValues={{from: -50, to: 10}} styleProps={{height: 70}} scrollY={scrollY} isRefreshing={isRefreshing} minPullDistance={minPullDistance}>
+      <PullAnimation yValues={{from: -50, to: 10}} styleProps={{height: 70}} scrollY={scrollY} isRefreshing={isRefreshing} minPullDistance={minPullDistance}>
         {children}
       </PullAnimation>
     </PullAnimationContainer>

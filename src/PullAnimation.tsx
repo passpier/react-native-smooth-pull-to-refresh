@@ -3,7 +3,6 @@ import {Animated, UIManager, ViewStyle} from "react-native";
 
 export interface PullAnimationProps {
   styleProps?: ViewStyle;
-  xValues: {from?: number; to?: number};
   yValues: {from?: number; to?: number};
   isRefreshing?: boolean;
   minPullDistance?: number;
@@ -14,7 +13,7 @@ type BaseComponentProps = PullAnimationProps;
 
 UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
 
-export const PullAnimation: React.FunctionComponent<BaseComponentProps> = ({styleProps, isRefreshing, scrollY, minPullDistance, yValues, xValues, children}) => (
+export const PullAnimation: React.FunctionComponent<BaseComponentProps> = ({styleProps, isRefreshing, scrollY, minPullDistance, yValues, children}) => (
   <Animated.View
     style={[
       styleProps,
@@ -24,7 +23,6 @@ export const PullAnimation: React.FunctionComponent<BaseComponentProps> = ({styl
           outputRange: [yValues.to || yValues.to === 0 ? yValues.to : yValues.from, yValues.from],
           extrapolate: "clamp",
         }),
-        left: xValues.from,
         position: "absolute",
       },
     ]}

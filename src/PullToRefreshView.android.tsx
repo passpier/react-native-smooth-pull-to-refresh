@@ -49,7 +49,6 @@ const BaseComponent: React.SFC<BaseComponentProps> = ({
     <ScrollView ref={refScrollComponent} contentContainerStyle={{minHeight}} scrollEnabled={isScrollFree} onScroll={onScrollEvent} onLayout={onLayout} onMomentumScrollEnd={onMomentumScrollEnd} onScrollEndDrag={onScrollEndDrag}>
       <RefreshContainer backgroundColor={defaultPTRBackgroundColor} height={refreshHeight}>
         <PullAnimation
-          xValues={{from: 125}}
           yValues={{from: -50, to: 10}}
           styleProps={{height: 70}}
           scrollY={

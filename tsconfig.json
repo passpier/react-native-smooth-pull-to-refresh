@@ -10,6 +10,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": true,
+    "declarationDir": "dist",
     "lib": ["es5", "es6", "es2017.object"],
     "jsx": "react",
     "outDir": "dist",
