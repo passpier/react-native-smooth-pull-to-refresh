@@ -11,6 +11,9 @@ $ npm install --save react-native-smooth-pull-to-refresh
 $ yarn add react-native-smooth-pull-to-refresh
 ```
 
+## Demo project
+https://github.com/passpier/PTRDemo
+
 ## Basic usage
 ```typescript
 import {PullToRefreshView} from "react-native-smooth-pull-to-refresh";
@@ -78,7 +81,3 @@ export class App extends Component<AppProps, AppState> {
 | minPullDistance     | number     | Sets pull distance for how far the Y axis needs to be pulled before a refresh event is triggered     |
 | onRefresh     | function     | Callback for when the refreshing state occurs     |
 | contentComponent     | JSX.element     | The content view which should be passed in as a scrollable type     |
-
-## Demo project
-
-
