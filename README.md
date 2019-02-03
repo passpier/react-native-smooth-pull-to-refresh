@@ -1,5 +1,5 @@
 # react-native-smooth-pull-to-refresh
-[![npm version](https://badge.fury.io/js/react-native-smooth-pull-to-refresh.svg)](https://badge.fury.io/js/react-native-smooth-pull-to-refresh) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
+[![Build Status](https://travis-ci.org/passpier/react-native-smooth-pull-to-refresh.svg?branch=master)](https://travis-ci.org/passpier/react-native-smooth-pull-to-refresh) [![npm version](https://badge.fury.io/js/react-native-smooth-pull-to-refresh.svg)](https://badge.fury.io/js/react-native-smooth-pull-to-refresh) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 Using [recompse](https://github.com/acdlite/recompose/blob/master/docs/API.md) to implement a pull to refresh component for React Native. The solution just using pure Js to support iOS and Android.
 
@@ -33,6 +33,8 @@ export class App extends Component<AppProps, AppState> {
         </View>
         <PullToRefreshView
           minPullDistance={70}
+          pullAnimHeight={70}
+          pullAnimYValues={{from: -50, to: 10}}
           isRefreshing={this.state.isRefreshing}
           onRefresh={this.onInnerRefresh}
           onTriggerToRefresh={this.onTriggerToRefresh}
@@ -77,7 +79,9 @@ export class App extends Component<AppProps, AppState> {
 
 | Props | Type | Description |
 | -------- | -------- | -------- |
-| isRefreshing     | boolean     | Refresh state set by parent to trigger refresh     |
-| minPullDistance     | number     | Sets pull distance for how far the Y axis needs to be pulled before a refresh event is triggered     |
-| onRefresh     | function     | Callback for when the refreshing state occurs     |
-| contentComponent     | JSX.element     | The content view which should be passed in as a scrollable type     |
+| isRefreshing | boolean | Refresh state set by parent to trigger refresh |
+| minPullDistance | number | Sets pull distance for how far the Y axis needs to be pulled before a refresh event is triggered |
+| pullAnimHeightefresh | number | Sets header height for pull animation |
+| pullAnimYValues | {from: number, to: number} | Points for where the animation components will start and end at on the Y-axis |
+| onRefresh | function | Callback for when the refreshing state occurs |
+| contentComponent | JSX.element | The content view which should be passed in as a scrollable type |
