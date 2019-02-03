@@ -21,4 +21,6 @@ module.exports = {
     "dist",
     "/src/__tests__/test-helper"
   ],
+  coverageDirectory: "./coverage/",
+  collectCoverage: true
 };
