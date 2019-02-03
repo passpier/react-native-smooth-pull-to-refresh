@@ -4,4 +4,5 @@ node_js:
 cache: yarn
 script:
   - npm test
-  - codecov -f coverage/*.json
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
