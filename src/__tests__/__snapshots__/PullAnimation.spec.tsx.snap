@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PullAnimation spec App show PullAnimation 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      Object {
+        "position": "absolute",
+        "top": null,
+      },
+    ]
+  }
+/>
+`;

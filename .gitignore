@@ -57,3 +57,8 @@ fastlane/
 jsconfig.json
 dist
 .vscode
+
+# Jest
+#
+.jest/
+coverage/

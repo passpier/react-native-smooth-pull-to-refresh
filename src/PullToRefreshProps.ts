@@ -4,6 +4,8 @@ export interface PullToRefreshProps {
     isRefreshing: boolean;
     onRefresh: () => void;
     contentComponent: JSX.Element;
+    pullAnimHeight: number;
+    pullAnimYValues: {from: number, to: number};
     minPullDistance?: number;
     backgroundColor?: string;
     onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;

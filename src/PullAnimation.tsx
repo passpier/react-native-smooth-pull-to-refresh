@@ -4,9 +4,9 @@ import {Animated, UIManager, ViewStyle} from "react-native";
 export interface PullAnimationProps {
   styleProps?: ViewStyle;
   yValues: {from?: number; to?: number};
-  isRefreshing?: boolean;
-  minPullDistance?: number;
-  scrollY?: Animated.Value;
+  isRefreshing: boolean;
+  minPullDistance: number;
+  scrollY: Animated.Value;
 }
 
 type BaseComponentProps = PullAnimationProps;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PullToRefreshView android spec App show PullToRefreshView android 1`] = `
+<withState(withState(withState(withState(withHandlers(lifecycle(BaseComponent))))))
+  contentComponent={<ScrollView />}
+  isRefreshing={false}
+  onRefresh={[Function]}
+  pullAnimHeight={70}
+  pullAnimYValues={
+    Object {
+      "from": -50,
+      "to": 10,
+    }
+  }
+  scrollY={
+    Object {
+      "interpolate": [Function],
+    }
+  }
+  setScrollY={[Function]}
+/>
+`;

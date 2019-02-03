@@ -33,6 +33,8 @@ const BaseComponent: React.SFC<BaseComponentProps> = ({
   isScrollFree,
   onScrollEvent,
   refScrollComponent,
+  pullAnimHeight,
+  pullAnimYValues,
   children,
 }) => (
   <ScrollContainer backgroundColor={backgroundColor}>
@@ -45,7 +47,7 @@ const BaseComponent: React.SFC<BaseComponentProps> = ({
         }),
       }}
     >
-      <PullAnimation yValues={{from: -50, to: 10}} styleProps={{height: 70}} scrollY={scrollY} isRefreshing={isRefreshing} minPullDistance={minPullDistance}>
+      <PullAnimation yValues={pullAnimYValues} styleProps={{height: pullAnimHeight}} scrollY={scrollY} isRefreshing={isRefreshing} minPullDistance={minPullDistance}>
         {children}
       </PullAnimation>
     </PullAnimationContainer>
