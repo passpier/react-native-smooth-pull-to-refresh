@@ -58,6 +58,7 @@ const BaseComponent: React.SFC<BaseComponentProps> = ({
         onScroll: onScrollEvent,
         onResponderRelease,
         ref: refScrollComponent,
+        scrollToOverflowEnabled: true,
       })}
     </ScrollContentView>
   </ScrollContainer>
